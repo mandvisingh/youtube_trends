@@ -13,14 +13,16 @@ router.get('/', async (req, res) => {
     title: config.title,
     videos: trends,
     countries: config.countryList,
-    selectedCountry: code
+    selectedCountry: code || "AF"
   });
 });
 
 router.get('/:videoId', async (req, res) => {
+  let code = req.query.countryCode;
   res.render('youtube/player', {
     title: config.title,
-    countries: config.countryList
+    countries: config.countryList,
+    selectedCountry: code || "AF"
   });
 });
 
