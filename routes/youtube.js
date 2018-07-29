@@ -12,7 +12,8 @@ router.get('/', async (req, res) => {
   res.render('youtube/index', {
     title: config.title,
     videos: trends,
-    countries: config.countryList
+    countries: config.countryList,
+    selectedCountry: code
   });
 });
 
