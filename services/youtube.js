@@ -7,11 +7,11 @@ const axios = Axios.create({
 });
 
 export class YoutubeService {
-  getTrendingVideos() {
+  getTrendingVideos(countryCode = 'AF') {
     var parameters = {
       part: 'snippet',
       chart: 'mostPopular',
-      regionCode: 'IN', // should be replaced with country code from countryList
+      regionCode: countryCode, // should be replaced with country code from countryList
       maxResults: '24',
       key: config.youtubeApi.key
     };

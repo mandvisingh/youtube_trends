@@ -7,7 +7,8 @@ const service = new YoutubeService();
 
 /* GET home page. */
 router.get('/', async (req, res) => {
-  const trends = await service.getTrendingVideos();
+  let code = req.query.countryCode;
+  const trends = await service.getTrendingVideos(code);
   res.render('youtube/index', {
     title: config.title,
     videos: trends,
