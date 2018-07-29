@@ -17,7 +17,8 @@ router.get('/', async (req, res) => {
 
 router.get('/:videoId', async (req, res) => {
   res.render('youtube/player', {
-    title: config.title
+    title: config.title,
+    countries: config.countryList
   });
 });
 
