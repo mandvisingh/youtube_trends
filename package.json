@@ -8,7 +8,8 @@
     "start": "nodemon --exec npm run babel-node -- ./bin/www",
     "test": "nyc mocha --timeout=10000 --compilers js:babel-core/register",
     "coverage": "nyc report --reporter=text-summary",
-    "lint": "eslint . --ext .js"
+    "lint": "eslint . --ext .js",
+    "again": "sudo kill `sudo lsof -t -i:3000` && npm run start"
   },
   "dependencies": {
     "axios": "^0.18.0",
