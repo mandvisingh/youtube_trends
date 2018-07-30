@@ -7,6 +7,6 @@ div(id='page-header')
       img(class='logo', src='/images/logo.svg')
     div(class='col-md-6 hidden-md-down note')
       span 
-        select(onclick="changeCountry(this.options[this.selectedIndex].value)")
+        select(onchange="changeCountry(this.options[this.selectedIndex].value)")
           each country in countries
             option(value=country.code, selected= country.code == selectedCountry) #{country.name}
