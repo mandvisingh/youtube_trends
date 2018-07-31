@@ -12,20 +12,20 @@ describe('Server', function () {
   it('should redirect on youtube trends', (done) => {
     chai.request(server)
       .get('/').redirects(0)
-      .end(function (err, res) {
+      .then(function (res) {
         res.should.have.status(302);
         res.should.redirectTo('/youtube');
         done();
-      });
+      }).catch(done);
   });
 
   it('should open /youtube', (done) => {
     chai.request(server)
       .get('/youtube')
-      .end(function (err, res) {
+      .then(function (res) {
         res.should.have.status(200);
         done();
-      });
+      }).catch(done);
   });
 
   it('should open /youtube/player', (done) => {
