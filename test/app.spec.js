@@ -74,19 +74,4 @@ describe('Server', function() {
         done();
         });
   });
-
-  // it("should return 404",function(done){
-  //   chai.request(server)
-  //   .get("/random")
-  //   // .expect(404)
-  //   .catch(function(err,res){
-  //     res.status.should.equal(404);
-  //     done();
-  //   })
-  //   .end(function(err,res){
-  //     res.status.should.equal(404);
-  //     done();
-  //   });
-  // });
-
 });
